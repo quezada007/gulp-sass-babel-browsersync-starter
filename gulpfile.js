@@ -8,7 +8,8 @@ const gulp = require('gulp'),
     eslint = require('gulp-eslint'),
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat')
+    concat = require('gulp-concat'),
+    del = require('del')
 ;
 
 const src = 'src/',         // Source Directory
@@ -63,11 +64,19 @@ gulp.task('watch', function() {
 });
 
 /**
+ * Clean Task
+ */
+gulp.task('clean', function(done) {
+    del([dist + 'assets/css', dist + 'assets/js']);
+    done();
+});
+
+/**
  * Default Task
  */
-gulp.task('default', gulp.series('scss', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.series('clean', gulp.parallel('scss', 'scripts'), 'browser-sync', 'watch'));
 
 /**
  * Production Task
  */
-gulp.task('production', gulp.parallel('scss', 'scripts'));
+gulp.task('production', gulp.series('clean', gulp.parallel('scss', 'scripts')));

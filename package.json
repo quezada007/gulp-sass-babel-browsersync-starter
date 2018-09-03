@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp production"
+    "build": "gulp production",
+    "clean": "gulp clean"
   },
   "keywords": [
     "gulp",
@@ -22,6 +23,7 @@
     "@babel/preset-env": "^7.0.0",
     "autoprefixer": "^9.1.3",
     "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
