@@ -1,0 +1,159 @@
+/* Fonts */
+$primaryFont: 'OpenSans';
+$sansSerifFont: Arial, Helvetica, sans-serif;
+
+/* Font Weights */
+$thin: 100;
+$extraLight: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
+
+/* Light Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-Light.eot'),
+    url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Light.woff2') format('woff2'),
+    url('../fonts/OpenSans-Light.woff') format('woff'),
+    url('../fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: $light;
+    font-style: normal;
+}
+
+/* Light Italic Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-LightItalic.eot'),
+    url('../fonts/OpenSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-LightItalic.woff2') format('woff2'),
+    url('../fonts/OpenSans-LightItalic.woff') format('woff'),
+    url('../fonts/OpenSans-LightItalic.ttf') format('truetype');
+    font-weight: $light;
+    font-style: italic;
+}
+
+/* Regular Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-Regular.eot'),
+    url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: $normal;
+    font-style: normal;
+}
+
+/* Regular Italic Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-Italic.eot'),
+    url('../fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Italic.woff2') format('woff2'),
+    url('../fonts/OpenSans-Italic.woff') format('woff'),
+    url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: $normal;
+    font-style: italic;
+}
+
+/* Semibold Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-Semibold.eot'),
+    url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Semibold.woff') format('woff'),
+    url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: $semiBold;
+    font-style: normal;
+}
+
+/* Semibold Italic Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-SemiboldItalic.eot'),
+    url('../fonts/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-SemiboldItalic.woff2') format('woff2'),
+    url('../fonts/OpenSans-SemiboldItalic.woff') format('woff'),
+    url('../fonts/OpenSans-SemiboldItalic.ttf') format('truetype');
+    font-weight: $semiBold;
+    font-style: italic;
+}
+
+/* Bold Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-Bold.eot'),
+    url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: $bold;
+    font-style: normal;
+}
+
+/* Bold Italic Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-BoldItalic.eot'),
+    url('../fonts/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+    url('../fonts/OpenSans-BoldItalic.woff') format('woff'),
+    url('../fonts/OpenSans-BoldItalic.ttf') format('truetype');
+    font-weight: $bold;
+    font-style: italic;
+}
+
+/* Extra Bold Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-ExtraBold.eot'),
+    url('../fonts/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+    url('../fonts/OpenSans-ExtraBold.woff') format('woff'),
+    url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: $extraBold;
+    font-style: normal;
+}
+
+/* Extra Bold Italic Font */
+@font-face {
+    font-family: $primaryFont;
+    src: url('../fonts/OpenSans-ExtraBoldItalic.eot'),
+    url('../fonts/OpenSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-ExtraBoldItalic.woff2') format('woff2'),
+    url('../fonts/OpenSans-ExtraBoldItalic.woff') format('woff'),
+    url('../fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: $extraBold;
+    font-style: italic;
+}
+
+/* converts px to em */
+@function em($px:16, $base:16) {
+    @return ($px/$base) * 1em;
+}
+
+/* converts px to rem */
+@function rem($px:16, $base:16) {
+    @return ($px/$base) * 1rem;
+}
+
+:root {
+    font-size: 16px;
+}
+
+html, body {
+    font: {
+        size: 16px;
+        family: $primaryFont;
+        weight: $normal;
+    }
+    line-height: 1;
+    color: $textColor;
+    overflow-x: hidden;
+}

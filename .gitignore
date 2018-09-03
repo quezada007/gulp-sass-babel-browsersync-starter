@@ -1,0 +1,85 @@
+# Ignore hidden folders
+# This takes care of .tmp, .sass-cache, .idea and many others
+.*/
+
+# Node Modules
+node_modules/
+
+# Compiled CSS and JS files
+app/assets/css/styles.css
+app/assets/css/styles.css.map
+app/assets/js/main.js
+app/assets/js/main.js.map
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# eslint cache
+.eslintcache
+
+# OSX
+._*
+.AppleDouble
+.DS_Store
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+
+# Windows
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.lnk
+
+# Always-ignore files and folders #
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swn
+*.swo
+*.swp
+._*
+*~
+
+# Ignore packages #
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.tgz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.cab
+*.iso
+*.tar
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+*.msi
+*.msm
+*.msp
+
+# Backups #
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# Ignore IDE files
+/nbproject/private/
+nbproject/
+*.sublime-workspace

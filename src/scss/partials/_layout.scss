@@ -1,0 +1,47 @@
+/* Breakpoints */
+$tiny: 374px;
+$S: 576px;
+$M: 768px;
+$L: 992px;
+$D: 1200px;
+$XL: 1366px;
+
+/* Media Queries */
+@mixin MQ($canvas) {
+    @if $canvas == tiny {
+        @media only screen and (max-width: $tiny) {
+            @content;
+        }
+    } @else if $canvas == S {
+        @media only screen and (min-width: $S) {
+            @content;
+        }
+    } @else if $canvas == M {
+        @media only screen and (min-width: $M) {
+            @content;
+        }
+    } @else if $canvas == L {
+        @media only screen and (min-width: $L) {
+            @content;
+        }
+    } @else if $canvas == D {
+        @media only screen and (min-width: $D) {
+            @content;
+        }
+    } @else if $canvas == XL {
+        @media only screen and (min-width: $XL) {
+            @content;
+        }
+    }
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
