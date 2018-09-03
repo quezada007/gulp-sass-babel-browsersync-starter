@@ -6,10 +6,10 @@
 node_modules/
 
 # Compiled CSS and JS files
-app/assets/css/styles.css
-app/assets/css/styles.css.map
-app/assets/js/main.js
-app/assets/js/main.js.map
+dist/assets/css/styles.css
+dist/assets/css/styles.css.map
+dist/assets/js/main.js
+dist/assets/js/main.js.map
 
 # Logs
 logs

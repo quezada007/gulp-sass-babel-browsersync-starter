@@ -1,1 +1,0 @@
-{"version":3,"sources":["file1.js","file2.js"],"names":["console","log"],"mappings":"aAAAA,QAAQC,IAAI;aCAZD,QAAQC,IAAI","file":"main.js","sourcesContent":["console.log('This is file 1');","console.log('This is file 2');"]}
