@@ -32,7 +32,7 @@ gulp.task('scss', function () {
  * JavaScript Tasks
  */
 gulp.task('scripts', function() {
-    gulp.src(scripts)
+    return gulp.src(scripts)
         .pipe(eslint())                         // Start ESLint
         .pipe(eslint.format())                  // Format ESLint results and print them to the console
         .pipe(sourcemaps.init())                // Initialize the source maps
@@ -47,26 +47,27 @@ gulp.task('scripts', function() {
 /**
  * Browser Sync Task
  */
-gulp.task('browser-sync', function(){
+gulp.task('browser-sync', function(done){
     browserSync({
         server: dist
     });
+    done();
 });
 
 /**
  * Watch Task
  */
 gulp.task('watch', function() {
-    gulp.watch(scripts, ['scripts']);
-    gulp.watch(src + 'scss/**/*.scss', ['scss']);
+    gulp.watch(scripts, gulp.series('scripts'));
+    gulp.watch(src + 'scss/**/*.scss', gulp.series('scss'));
 });
 
 /**
  * Default Task
  */
-gulp.task('default', ['scss', 'scripts', 'browser-sync', 'watch']);
+gulp.task('default', gulp.series('scss', 'scripts', 'browser-sync', 'watch'));
 
 /**
  * Production Task
  */
-gulp.task('production', ['scss', 'scripts']);
+gulp.task('production', gulp.parallel('scss', 'scripts'));
